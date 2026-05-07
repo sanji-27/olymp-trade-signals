@@ -97,7 +97,7 @@ python run.py
 |---|---|
 | `Auth failed` repeatedly | Refresh SSID |
 | `No data for OTC pairs` | OTC only via WS; refresh SSID |
-| `Module not found: pandas_ta` | `pip install pandas-ta==0.3.14b0` |
+| `Module not found: pandas_ta` | `pip install pandas-ta==0.4.71b0` |
 | Telegram silent | Send any message to your bot first; check chat ID |
 | Bot crashes on Windows | Use Python 3.11, not 3.13 |
 

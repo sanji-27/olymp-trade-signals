@@ -144,5 +144,5 @@ When you change any file:
 | `Auth rejected` | SSID expired -> get fresh one from browser |
 | `telegram disabled` | Bot token or chat ID missing |
 | `[router] using FALLBACK provider` | Olymp WS unreachable -> refresh SSID |
-| Build fails on `pandas-ta` | Check `runtime.txt` says `python-3.11` |
+| Build fails on `pandas-ta` | Check `runtime.txt` says `python-3.12` |
 | `address already in use` | Wait 60 seconds, Railway is restarting |

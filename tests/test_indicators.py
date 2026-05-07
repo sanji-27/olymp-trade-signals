@@ -18,7 +18,12 @@ def _fake_df(n=200, trend=0.0, seed=42):
 
 
 def test_indicators_run():
-    df = _fake_df()
+    min_bars = max(settings.indicators.ema_periods + [
+        settings.indicators.bb_period,
+        settings.indicators.macd_slow,
+        settings.indicators.adx_period * 2,
+    ]) + 5
+    df = _fake_df(n=min_bars)
     snap = compute_indicators(df, "EURUSD", 5, settings.indicators)
     assert snap is not None
     assert 0 <= snap.rsi <= 100
