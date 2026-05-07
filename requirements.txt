@@ -7,7 +7,7 @@ pydantic-settings==2.6.1
 # ---- Data & math ----
 pandas==2.2.3
 numpy==1.26.4
-pandas-ta==0.3.14b0
+pandas-ta==0.3.14b1
 scipy==1.14.1
 
 # ---- Networking ----
