@@ -1,0 +1,109 @@
+# ============================================================
+#  Olymp Trade Multi-Agent Signal Bot — main config
+#  Edit values here. Secrets stay in .env
+# ============================================================
+
+account:
+  balance_usd: 100.0
+  currency: "USD"
+
+assets:
+  forex:
+    - AUDCAD
+    - AUDJPY
+    - AUDUSD
+    - EURUSD
+    - EURJPY
+    - EURGBP
+    - EURAUD
+    - EURCAD
+    - EURCHF
+    - GBPUSD
+    - GBPAUD
+    - GBPCAD
+    - CADJPY
+
+  composites:
+    - ASIA_COMPOSITE
+    - COMMODITY_COMPOSITE
+    - CRYPTO_COMPOSITE
+
+  otc:
+    - EURUSD_OTC
+    - GBPUSD_OTC
+    - AUDCAD_OTC
+    - EURJPY_OTC
+
+timeframes:
+  expiries_minutes: [5, 10, 15, 20, 30, 40, 60]
+  context_tfs: [60, 240]
+
+risk:
+  risk_per_trade_pct: 0.5
+  max_daily_drawdown_pct: 2.5
+  consecutive_loss_limit: 2
+  asset_cooldown_minutes: 15
+  blackout_hours_utc: [21, 22, 23]
+  news_blackout_minutes: 15
+
+signals:
+  min_confidence_pct: 70
+  max_signals_per_day: 15
+  warmup_bars: 100
+
+indicators:
+  ema_periods: [9, 21, 50, 200]
+  rsi_period: 14
+  rsi_oversold: 30
+  rsi_overbought: 70
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  bb_period: 20
+  bb_std: 2.0
+  stoch_k: 14
+  stoch_d: 3
+  stoch_smooth: 3
+  atr_period: 14
+  adx_period: 14
+  adx_trending_threshold: 25
+
+regime:
+  trending_adx_min: 25
+  ranging_bb_width_max: 0.015
+  volatile_atr_multiplier: 1.8
+
+news:
+  rss_feeds:
+    - "https://www.forexlive.com/feed/news"
+    - "https://nfs.faireconomy.media/ff_calendar_thisweek.xml"
+  high_impact_keywords:
+    - "FOMC"
+    - "NFP"
+    - "non-farm payroll"
+    - "CPI"
+    - "rate decision"
+    - "ECB"
+    - "BoE"
+
+oracle:
+  weights:
+    technical: 0.45
+    regime: 0.20
+    sentiment: 0.15
+    multi_tf_alignment: 0.20
+  risk_veto: true
+
+telegram:
+  send_signals: true
+  send_status_updates: true
+  weekly_report_day: "Sunday"
+  weekly_report_hour_utc: 20
+
+logging:
+  level: "INFO"
+  rotation_mb: 50
+  retention_days: 30
+
+database:
+  path: "data/signals.db"

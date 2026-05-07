@@ -1,0 +1,36 @@
+# ---- Core async / config ----
+python-dotenv==1.0.1
+PyYAML==6.0.2
+pydantic==2.9.2
+pydantic-settings==2.6.1
+
+# ---- Data & math ----
+pandas==2.2.3
+numpy==1.26.4
+pandas-ta==0.3.14b0
+scipy==1.14.1
+
+# ---- Networking ----
+aiohttp==3.10.10
+websockets==13.1
+tenacity==9.0.0
+yfinance==0.2.48
+requests==2.32.3
+
+# ---- Telegram ----
+python-telegram-bot==21.6
+
+# ---- Database ----
+aiosqlite==0.20.0
+SQLAlchemy==2.0.36
+
+# ---- News / sentiment ----
+feedparser==6.0.11
+beautifulsoup4==4.12.3
+
+# ---- Logging ----
+loguru==0.7.2
+
+# ---- Dev ----
+pytest==8.3.3
+pytest-asyncio==0.24.0
